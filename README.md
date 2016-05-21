@@ -1,8 +1,9 @@
 Hardware
 
-Raspberry Pi 2
-Logitech C525 HD Webcam
-EDIMAX Wireless USB Adapter
+* Raspberry Pi 2
+* * Logitech C525 HD Webcam
+* * EDIMAX Wireless USB Adapter
+
 Betriebssystem
 
 Zunächst muss Raspbian als Betriebssystem auf der Micro-SD-Karte des Raspberrys installiert werden. Eine Anleitung dazu findet sich hier.
