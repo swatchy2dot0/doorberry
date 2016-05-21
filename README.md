@@ -1,28 +1,35 @@
 Hardware
 
 * Raspberry Pi 2
-* * Logitech C525 HD Webcam
-* * EDIMAX Wireless USB Adapter
+* Logitech C525 HD Webcam
+* EDIMAX Wireless USB Adapter
 
 Betriebssystem
 
 Zunächst muss Raspbian als Betriebssystem auf der Micro-SD-Karte des Raspberrys installiert werden. Eine Anleitung dazu findet sich hier.
 
 Das Passwort und den Hostnamen des Raspberry PI kann man mit folgendem Tool anpassen:
+
 sudo raspi-config
+
 Im Anschluss sollte das OS auf den neuesten Stand gebracht werden:
+
 sudo apt-get update && sudo apt-get upgrade -y
+
 Wifi Adapter
 
 Energiesparmodus abschalten
 
 Datei anlegen
+
 sudo nano /etc/modprobe.d/8192cu.conf
+
 Inhalt
 options 8192cu rtw_power_mgnt=0 rtw_enusbss=0
 Konfigurationsdatei editieren
 
 sudo nano /etc/network/interfaces
+
 Inhalt anpassen zu
 auto lo
 iface lo inet loopback
@@ -39,12 +46,11 @@ iface default inet dhcp
 Änderungen übernehmen
 
 sudo service networking restart
+
 motion installieren
 
 sudo apt-get install motion
 sudo nano /etc/motion/motion.conf
-
-
 
 daemon off -> daemon on
 process_id_file -> /home/raspbian/motion/motion.pid
